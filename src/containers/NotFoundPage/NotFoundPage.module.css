@@ -1,0 +1,11 @@
+.notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.notFoundText {
+  color: var(--color-white);
+  font-size: var(--font-size-header);
+  text-shadow: 0 0 2px var(--color-black);
+}

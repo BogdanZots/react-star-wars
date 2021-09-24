@@ -7,13 +7,18 @@ const Header = () => {
     <div className={s.container}>
       <ul className={s.list__container}>
         <li className={s.list__item}>
-          <NavLink to="/" exact>
+          <NavLink to="/home" exact>
             Home
           </NavLink>
         </li>
         <li className={s.list__item}>
-          <NavLink to="/people/?page=1" exact="">
+          <NavLink to="/people/?page=1">
             People
+          </NavLink>
+        </li>
+        <li className={s.list__item}>
+          <NavLink to="/favorite">
+            Favorite
           </NavLink>
         </li>
       </ul>

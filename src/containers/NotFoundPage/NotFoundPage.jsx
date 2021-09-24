@@ -5,7 +5,6 @@ import s from "./NotFoundPage.module.css";
 
 const NotFoundPage = () => {
   const location = useLocation();
-  console.log(location);
   return (
     <div className={s.notFound}>
       <img alt="page not found" src={notFoundImg} />

@@ -1,10 +1,11 @@
 import PeoplePage from "@containers/PeoplePage/PeoplePage";
 import HomePage from "@containers/HomePage/HomePage";
-import NotFoundPage from "../containers/NotFoundPage/NotFoundPage";
+import PersonPage from "../containers/PersonPage/PersonPage";
+import FavoritePage from "../containers/favoritesPage.jsx/FavoritePage";
 
 const routesConfig = [
   {
-    path: "/",
+    path: "/home",
     exact: true,
     component: HomePage,
   },
@@ -14,9 +15,14 @@ const routesConfig = [
     component: PeoplePage,
   },
   {
-    path: "*",
-    exact: false,
-    component: NotFoundPage,
+    path: "/favorite",
+    exact: true,
+    component: FavoritePage,
+  },
+  {
+    path: "/people/:id", // обозначаем через : что id
+    exact: true,
+    component: PersonPage,
   },
 ];
 

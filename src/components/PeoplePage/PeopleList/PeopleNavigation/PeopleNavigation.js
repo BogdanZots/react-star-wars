@@ -16,7 +16,6 @@ export default function PeopleNavigation({
   const handleChangePrev = () => {
     return getResource(prevPage);
   };
-  console.log("prev page", prevPage);
   return (
     <div className={s.container}>
       <Link to={`?page=${counterPage - 1}`} className={s.buttons}>

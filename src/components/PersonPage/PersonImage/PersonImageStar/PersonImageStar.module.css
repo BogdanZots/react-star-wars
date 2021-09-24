@@ -1,0 +1,14 @@
+.starIcon {
+  width: 30px;
+  fill: #757575;
+}
+
+.starIcon__container {
+  position: absolute;
+  right: -11px;
+  bottom: 1%;
+  cursor: pointer;
+}
+.starIconFavorite {
+    fill: yellow;
+}

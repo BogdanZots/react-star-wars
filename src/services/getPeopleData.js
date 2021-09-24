@@ -1,16 +1,22 @@
-import { HTTPS, SWAPI_ROOT, SWAPI_PEOPLE , URL_IMG_PERSON , GUID_IMG_EXTENSION , SWAPI_PARAM_PAGE } from "@const/api";
+import {
+  HTTPS,
+  SWAPI_ROOT,
+  SWAPI_PEOPLE,
+  URL_IMG_PERSON,
+  GUID_IMG_EXTENSION,
+  SWAPI_PARAM_PAGE,
+} from "@const/api";
 
-export const getPeoplePageId = (url) =>{
-const pos = url.lastIndexOf(SWAPI_PARAM_PAGE);
-const id = url.slice(pos+SWAPI_PARAM_PAGE.length,url.length);
-console.log(id)
-return Number(id);
-}
+export const getPeoplePageId = (url) => {
+  const pos = url.lastIndexOf(SWAPI_PARAM_PAGE);
+  const id = url.slice(pos + SWAPI_PARAM_PAGE.length, url.length);
+  return Number(id);
+};
 
 /**
  * Получает id каждого запрашиваемого персонажа из url
- * @param {string} url 
- * @param {string} category 
+ * @param {string} url
+ * @param {string} category
  * @returns {string} - id персонажа
  */
 const getId = (url, category) => {
@@ -22,6 +28,12 @@ export const getPeopleId = (url) => {
   return getId(url, SWAPI_PEOPLE);
 };
 
-export const getPeopleImg = id => URL_IMG_PERSON+id+GUID_IMG_EXTENSION;
+export const getPeopleImg = (id) => URL_IMG_PERSON + id + GUID_IMG_EXTENSION;
 
-
+export const checkIsObjEmpty = (obj) => {
+  for(let key in obj) {
+    return true
+  }
+  return false
+/*   return Object.keys(obj).length === 0; */
+};

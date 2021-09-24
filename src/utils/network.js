@@ -11,3 +11,23 @@ export const getApiResource = async (url) => {
   }
 };
 
+export const makeConcurrentRequest = async (arr) => {
+  const res = await Promise.all(
+    arr.map((promise) => {
+      return fetch(promise).then((data) => data.json());
+    })
+  );
+  return res;
+};
+
+export const getLocalStorage = (key) => {
+  const data = localStorage.getItem(key);
+  if (data !== null) {
+    return JSON.parse(data);
+  }
+  return {};
+};
+
+export const setToLocalStorage = (key, data) => {
+  localStorage.setItem(key, JSON.stringify(data));
+};

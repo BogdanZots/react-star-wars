@@ -20,6 +20,7 @@ export const makeConcurrentRequest = async (arr) => {
   return res;
 };
 
+
 export const getLocalStorage = (key) => {
   const data = localStorage.getItem(key);
   if (data !== null) {

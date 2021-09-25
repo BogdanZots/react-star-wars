@@ -3,6 +3,7 @@ import { makeConcurrentRequest } from "../../../utils/network";
 import s from "./PersonFilms.module.css"
 const PersonFilms = ({ personFilms }) => {
   const [filmsData, setFilmsData] = useState([]);
+  console.log(personFilms)
   useEffect(() => {
     (async () => {
       const data = await makeConcurrentRequest(personFilms);
